@@ -1,7 +1,7 @@
 django-comments-xtd |TravisCI|_
 ===================
 
-.. |TravisCI| image:: https://secure.travis-ci.org/danirus/django-comments-xtd.png?branch=master
+.. |TravisCI| image:: https://storage.googleapis.com/django-comments-xtd-badges/builds/branches/${branch}.svg
 .. _TravisCI: https://travis-ci.org/danirus/django-comments-xtd
 
 A Django pluggable application that adds comments to your project.
