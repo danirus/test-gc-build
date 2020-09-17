@@ -1,4 +1,3 @@
-# This comment is just to trigger a gc-build.
 from django.utils.module_loading import import_string
 
 import django_comments
@@ -19,7 +18,7 @@ def get_form():
     return import_string(settings.COMMENTS_XTD_FORM_CLASS)
 
 
-VERSION = (2, 7, 2, 'f', 0)  # following PEP 440
+VERSION = (2, 7, 2, 'f', 1)  # following PEP 440
 
 
 def get_version():
