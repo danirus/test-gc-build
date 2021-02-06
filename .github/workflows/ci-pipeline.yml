@@ -1,13 +1,9 @@
-name: django-comments-xtd
+name: tests
 on: [push]
 
 jobs:
-  build:
+  pep8-syntax-check:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        django: ["2.0", "2.1", "2.2", "3.0", "3.1"]
-
     steps:
       - uses: actions/checkout@v2
       - name: Setup Python
@@ -15,6 +11,22 @@ jobs:
         with:
           python-version: '3.8'
       - name: Install Tox and flake8
-        run: pip install tox flake8 "django==${{ matrix.django }}"
-      - name: Run Tox
+        run: pip install tox flake8
+      - name: Check syntax compliance
+        run: tox -e pep8
+
+  tests-on-django:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        django: ["2.0", "2.1", "2.2", "3.0", "3.1"]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: Install Tox and Django
+        run: pip install tox "django==${{ matrix.django }}"
+      - name: Run unit tests
         run: tox -e py-3.8-django-${{ matrix.django }}
