@@ -1,7 +1,7 @@
 django-comments-xtd |gh-badge|_
 ===================
 
-.. |gh-badge| image:: https://github.com/danirus/test-gh-with-dcx/workflows/django-comments-xtd/badge.svg
+.. |gh-badge| image:: https://github.com/danirus/test-gh-with-dcx/workflows/tests/badge.svg
 .. _gh-badge: https://github.com/danirus/test-gh-with-dcx/actions
 
 A Django pluggable application that adds comments to your project.

@@ -1,4 +1,4 @@
-name: django-comments-xtd
+name: tests
 on: [push]
 
 jobs:
@@ -16,5 +16,7 @@ jobs:
           python-version: '3.8'
       - name: Install Tox and flake8
         run: pip install tox flake8 "django==${{ matrix.django }}"
-      - name: Run Tox
+      - name: Verify PEP8 compliance
+        run: tox -e pep8
+      - name: Run unit tests
         run: tox -e py-3.8-django-${{ matrix.django }}
