@@ -1,4 +1,4 @@
-name: django-comments-xtd CI
+name: django-comments-xtd
 on: [push]
 
 jobs:

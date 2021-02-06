@@ -1,8 +1,8 @@
-django-comments-xtd |TravisCI|_
+django-comments-xtd |gh-badge|_
 ===================
 
-.. |TravisCI| image:: https://secure.travis-ci.org/danirus/django-comments-xtd.png?branch=master
-.. _TravisCI: https://travis-ci.org/danirus/django-comments-xtd
+.. |gh-badge| image:: https://github.com/danirus/test-gh-with-dcx/workflows/django-comments-xtd/badge.svg
+.. _gh-badge: https://github.com/danirus/test-gh-with-dcx/actions
 
 A Django pluggable application that adds comments to your project.
 
