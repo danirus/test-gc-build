@@ -2,7 +2,7 @@ name: tests
 on: [push]
 
 jobs:
-  pep8-check:
+  pep8:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +15,7 @@ jobs:
       - name: Check syntax compliance
         run: tox -e pep8
 
-  on-django:
+  django:
     runs-on: ubuntu-latest
     strategy:
       matrix:
