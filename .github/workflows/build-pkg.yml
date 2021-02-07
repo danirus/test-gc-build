@@ -1,8 +1,6 @@
 name: build-pkg
 
-on:
-  release:
-    types: [created]
+on: [push]
 
 jobs:
   deploy:
@@ -21,13 +19,14 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: "3.x"
-    - name: Build locale messages
-      run: |
-        cd django_comments_xtd && django-admin compilemessages
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install setuptools wheel twine
+        pip install -r requirements.pip
+    - name: Build locale messages
+      run: |
+        cd django_comments_xtd && django-admin compilemessages
     - name: Build Python package
       run: |
         python setup.py sdist bdist_wheel
