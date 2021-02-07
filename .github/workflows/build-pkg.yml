@@ -24,6 +24,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install setuptools wheel twine
         pip install -r requirements.pip
+    - name: Install GNU gettext
+      run: sudo apt-get -y install gettext
     - name: Build locale messages
       run: |
         cd django_comments_xtd && django-admin compilemessages
