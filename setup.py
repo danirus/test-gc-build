@@ -17,7 +17,7 @@ test.run_tests = run_tests
 
 
 setup(
-    name="django-comments-xtd",
+    name="dcx-gh-actions",
     version="2.7.2",
     packages=find_packages(),
     include_package_data=True,
@@ -33,7 +33,7 @@ setup(
     author_email="mbox@danir.us",
     maintainer="Daniel Rus Morales",
     maintainer_email="mbox@danir.us",
-    url="http://pypi.python.org/pypi/django-comments-xtd",
+    url="http://pypi.python.org/pypi/dcx-gh-actions",
     install_requires=[
         'Django>=1.8',
         'django-contrib-comments>=1.8',
